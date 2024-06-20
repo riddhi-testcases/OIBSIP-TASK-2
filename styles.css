@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
+
+/* Custom CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+  ::selection {
+    color: black;
+    background-color: #cac857;
+  }
+  header {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 90px;
+  }
+  .header-left-side {
+    color: rgb(8, 7, 7);
+  }
+  .header-left-side h1 {
+    color: #c4aa4b;
+    line-height: 1.2em;
+    font-size: 78px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400 !important;
+  }
+  .header-left-side h2 {
+    color: #b0ad79;
+    font-family: "Inter", sans-serif;
+    font-size: 26px;
+    line-height: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 10px 0;
+  }
+  .header-left-side p {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #0a0a0a;
+    line-height: 2;
+  }
+  .button-container {
+    display: flex;
+    gap: 15px;
+  }
+  button, .btn {
+    padding: 20px 30px;
+    border: 2px solid #f5f9fb;
+    background: linear-gradient(45deg, #121210, #c3a13d);
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  button:hover, .btn:hover {
+    background: linear-gradient(45deg, #d4a76a, #bea060);
+    box-shadow: 0 6px 8px rgba(5, 4, 4, 0.2);
+    transform: translateY(-2px);
+  }
+  .header-left-side h3 {
+    color: #c1bfbf;
+    padding-top: 80px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+  }
+  .header-right-side img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 15%;
+  }
+  section {
+    padding: 50px 90px;
+    background-color: #edca3e;
+  }
+  section h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    color: #191818;
+    margin-bottom: 20px;
+    text-align: center
+  }
+  section p {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #0f0202;
+    line-height: 1.6;
+  }
+  .skills, .projects, .hobbies, .achievements, .about-me, .contact-info {
+    margin-bottom: 50px;
+  }
+  #projects, #achievements, #hobbies {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .projects-container, .achievements-container, .hobbies-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .projects-container h2, .achievements-container h2, .hobbies-container h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #070501;
+  }
+  
+  .project-item, .achievement-item, .hobby-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .project-image, .achievement-icon, .hobby-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #d8d4cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  
+  .project-image img, .achievement-icon i, .hobby-icon i {
+    width: 50px;
+    height: 50px;
+    color: white;
+  }
+  
+  .project-details, .achievement-details, .hobby-details {
+    flex: 1;
+    color: white;
+  }
+  
+  .project-details h3, .achievement-details h3, .hobby-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-details p, .achievement-details p, .hobby-details p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .skills {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 800px;
+        height: 800px;
+        margin: 0 auto;
+        background-color: #d5ab37;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .skills img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .skill-item {
+    position: absolute;
+    background-color: #3a2b09;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    transform-origin: center;
+  }
+  .skill-item:nth-child(2) { transform: translate(-50%, -50%) rotate(0deg) translate(200px) rotate(0deg); }
+        .skill-item:nth-child(3) { transform: translate(-50%, -50%) rotate(40deg) translate(200px) rotate(-40deg); }
+        .skill-item:nth-child(4) { transform: translate(-50%, -50%) rotate(80deg) translate(200px) rotate(-80deg); }
+        .skill-item:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg) translate(200px) rotate(-120deg); }
+        .skill-item:nth-child(6) { transform: translate(-50%, -50%) rotate(160deg) translate(200px) rotate(-160deg); }
+        .skill-item:nth-child(7) { transform: translate(-50%, -50%) rotate(200deg) translate(200px) rotate(-200deg); }
+        .skill-item:nth-child(8) { transform: translate(-50%, -50%) rotate(240deg) translate(200px) rotate(-240deg); }
+        .skill-item:nth-child(9) { transform: translate(-50%, -50%) rotate(280deg) translate(200px) rotate(-280deg); }
+        .skill-item:nth-child(10) { transform: translate(-50%, -50%) rotate(320deg) translate(200px) rotate(-320deg); }
+        
+  .contact-info a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .contact-info a i {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
