@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
+
+/* Custom CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+  ::selection {
+    color: black;
+    background-color: #cac857;
+  }
+  header {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 90px;
+  }
+  .header-left-side {
+    color: rgb(8, 7, 7);
+  }
+  .header-left-side h1 {
+    color: #c4aa4b;
+    line-height: 1.2em;
+    font-size: 78px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400 !important;
+  }
+  .header-left-side h2 {
+    color: #b0ad79;
+    font-family: "Inter", sans-serif;
+    font-size: 26px;
+    line-height: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 10px 0;
+  }
+  .header-left-side p {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #0a0a0a;
+    line-height: 2;
+  }
+  .button-container {
+    display: flex;
+    gap: 15px;
+  }
+  button, .btn {
+    padding: 20px 30px;
+    border: 2px solid #f5f9fb;
+    background: linear-gradient(45deg, #121210, #c3a13d);
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  button:hover, .btn:hover {
+    background: linear-gradient(45deg, #d4a76a, #bea060);
+    box-shadow: 0 6px 8px rgba(5, 4, 4, 0.2);
+    transform: translateY(-2px);
+  }
+  .header-left-side h3 {
+    color: #c1bfbf;
+    padding-top: 80px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+  }
+  .header-right-side img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 15%;
+  }
+  section {
+    padding: 50px 90px;
+    background-color: #edca3e;
+  }
+  section h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    color: #191818;
+    margin-bottom: 20px;
+    text-align: center
+  }
+  section p {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #0f0202;
+    line-height: 1.6;
+  }
+  .skills, .projects, .hobbies, .achievements, .about-me, .contact-info {
+    margin-bottom: 50px;
+  }
+  #projects, #achievements, #hobbies {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .projects-container, .achievements-container, .hobbies-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .projects-container h2, .achievements-container h2, .hobbies-container h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #070501;
+  }
+  
+  .project-item, .achievement-item, .hobby-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .project-image, .achievement-icon, .hobby-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #d8d4cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  
+  .project-image img, .achievement-icon i, .hobby-icon i {
+    width: 50px;
+    height: 50px;
+    color: white;
+  }
+  
+  .project-details, .achievement-details, .hobby-details {
+    flex: 1;
+    color: white;
+  }
+  
+  .project-details h3, .achievement-details h3, .hobby-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-details p, .achievement-details p, .hobby-details p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .skills {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 800px;
+        height: 800px;
+        margin: 0 auto;
+        background-color: #d5ab37;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .skills img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .skill-item {
+    position: absolute;
+    background-color: #3a2b09;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    transform-origin: center;
+  }
+  .skill-item:nth-child(2) { transform: translate(-50%, -50%) rotate(0deg) translate(200px) rotate(0deg); }
+        .skill-item:nth-child(3) { transform: translate(-50%, -50%) rotate(40deg) translate(200px) rotate(-40deg); }
+        .skill-item:nth-child(4) { transform: translate(-50%, -50%) rotate(80deg) translate(200px) rotate(-80deg); }
+        .skill-item:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg) translate(200px) rotate(-120deg); }
+        .skill-item:nth-child(6) { transform: translate(-50%, -50%) rotate(160deg) translate(200px) rotate(-160deg); }
+        .skill-item:nth-child(7) { transform: translate(-50%, -50%) rotate(200deg) translate(200px) rotate(-200deg); }
+        .skill-item:nth-child(8) { transform: translate(-50%, -50%) rotate(240deg) translate(200px) rotate(-240deg); }
+        .skill-item:nth-child(9) { transform: translate(-50%, -50%) rotate(280deg) translate(200px) rotate(-280deg); }
+        .skill-item:nth-child(10) { transform: translate(-50%, -50%) rotate(320deg) translate(200px) rotate(-320deg); }
+        
+  .contact-info a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .contact-info a i {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left-side">
+      <h1>Riddhi Chakraborty</h1>
+      <h2>Full Stack Developer | AI/ML Enthusiast | Designer | Creative Thinker</h2>
+      
+      <div class="button-container">
+        <button>Contact Me</button>
+        <a href="assets/Riddhi Chakraborty Resume (2).pdf" class="btn" target="_blank">View Resume</a>
+      </div>
+      <h3>Welcome to my personal portfolio website!</h3>
+    </div>
+    <div class="header-right-side">
+      <img src="assets/WhatsApp Image 2024-06-15 at 09.02.08_f007e53e.jpg" alt="Profile Picture">
+    </div>
+  </header>
+
+  <section id="about-me">
+    <div class="about-me-container">
+        <h2>About Me</h2>
+        <p>
+            Hi, I'm an undergrad currently pursuing CSE, dedicated full stack developer with a passion for AI/ML, data science and design. With a strong foundation in frontend knowledge, mern concepts along with a deep passion for data science and UI/UX, I strive to create innovative and user-friendly solutions.
+        </p>
+        
+</section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <img src="assets/1__nk4VZGNdAKCS3rY0i_lWg.png" alt="Skills Image">
+    <div class="skill-item">HTML</div>
+    <div class="skill-item">CSS</div>
+    <div class="skill-item">JavaScript</div>
+    <div class="skill-item">MERN</div>
+    <div class="skill-item">Python</div>
+    <div class="skill-item">Java, C++</div>
+    <div class="skill-item">Machine,Learning</div>
+    <div class="skill-item">Git</div>
+  </section>
+
+  <section id="projects">
+    <div class="projects-container">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <div class="project-image">
+                <img src="assets/584668831a98d094bf9ceb0a533d0984149e044f.jpeg" alt="Project 1">
+            </div>
+            <div class="project-details">
+                <h3>Project 1: AI-Powered Chatbot</h3>
+                <p>A chatbot powered by AI and natural language processing to provide intelligent and personalized assistance.</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <div class="project-image">
+                <img src="assets/web-scraping.14c36f6b.jpg" alt="Project 2">
+            </div>
+            <div class="project-details">
+                <h3>Project 2: Web Scraper</h3>
+                <p>A web scraping tool that extracts data from websites and organizes it into a structured format.</p>
+            </div>
+        </div>
+        <div class="project-item">
+            <div class="project-image">
+                <img src="assets/responsive-web-design-1-61f01c4b64c5f-sej.webp" alt="Project 3">
+            </div>
+            <div class="project-details">
+                <h3>Project 3: Responsive Website</h3>
+                <p>A modern and responsive website design that adapts to different screen sizes and devices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="achievements">
+    <div class="achievements-container">
+        <h2>Achievements</h2>
+        <div class="achievement-item">
+          <div class="achievement-icon">
+            
+          </div>
+            <div class="achievement-details">
+                <h3>Silver Badge in Problem solving (Hackerank)</h3>
+                <p>Actively participated in various coding dhallenges, showcasing my problem-solving skills and creativity.</p>
+            </div>
+        </div>
+        <div class="achievement-item">
+            <div class="achievement-icon">
+            
+            </div>
+            <div class="achievement-details">
+                <h3>Competed in Amazon Hackon </h3>
+                <p>Showcased my data structure concepts in the coding round, demonstrating my expertise in programming and algorithms.</p>
+            </div>
+        </div>
+        <div class="achievement-item">
+            <div class="achievement-icon">
+                <i class="fas fa-book"></i>
+            </div>
+            <div class="achievement-details">
+                <h3>Earned certificates and badges on Web Development and Machine Learning</h3>
+                <p>Gained indepth knowledge on full stack, data science and machine learning.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="hobbies">
+    <div class="hobbies-container">
+        <h2>Hobbies</h2>
+        <div class="hobby-item">
+            <div class="hobby-icon">
+                <i class="fas fa-palette"></i>
+            </div>
+            <div class="hobby-details">
+                <h3>UI/UX Design</h3>
+                <p>Passionate about creating visually appealing and user-friendly designs.</p>
+            </div>
+        </div>
+        <div class="hobby-item">
+            <div class="hobby-icon">
+                <i class="fas fa-pen"></i>
+            </div>
+            <div class="hobby-details">
+                <h3>Creative Writing</h3>
+                <p>Enjoy expressing my thoughts and ideas through creative writing.</p>
+            </div>
+        </div>
+        <div class="hobby-item">
+            <div class="hobby-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <div class="hobby-details">
+                <h3>Reading</h3>
+                <p>Love to explore new ideas and perspectives through reading.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="contact-info">
+        <h2>Contact Info</h2>
+        <a href="riddhi.bbghs@gmail.com"><i class="fas fa-envelope"></i>Gmail : riddhi.bbghs@gmail.com</a>
+        <a href="https://www.linkedin.com/in/riddhi-chakraborty-334069279" target="_blank"><i class="fab fa-linkedin"></i>Linkedin : https://www.linkedin.com/in/riddhi-chakraborty-334069279</a>    
+</section>
+</body>
+</html>
